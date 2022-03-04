@@ -78,7 +78,11 @@ h50v-500h50v500h50
 
 </text>
 <!-- end draw grid -->
-<path d="M 0 0 c 0, 0, 400, 250, 600, 400" fill="chartreuse" />
+  <!--<polyline stroke="#000" stroke-width="5" fill="none" points="15,470 112,35 450,355 220,370 500,50 725,490 "/>-->
+
+
+     <polygon points="300 70, 600 470, 10 470" id="triangle"/>
+
 
 
 </svg>
