@@ -97,16 +97,17 @@ h50v-500h50v500h50
   <use x="-150" y="80" href="#montagne"/>
   <use x="350" y="80" href="#montagne"/>
 </g>
+tranform
 
 
-
-<g id="jumper" stroke-width="1" transform="scale(0.6)" viewBox="0 0 10 0">
+<g id="jumper" stroke-width="1" transform="scale(0.6) translate(-280, -140)" viewBox="0 0 10 0">
     <use xlink:href="#jumper_body" />
     <use xlink:href="#jumper_head" />
     <use xlink:href="#skies" />
 </g>
 <path id="path_tremplin" d="M0, 108, 70,108 C192,291 241,322 330,225"/>
 </defs>
+<!--
     <use x="0" y="0" href="#gp_mont" ><animateTransform attributeName="transform"
                           attributeType="XML"
                           type="translate"
@@ -122,4 +123,23 @@ h50v-500h50v500h50
                           to="200,0"
                           dur="2s"
                           repeatCount="indefinite"/></use>
+    -->
+    
+ 
+       <animate attributeName="viewBox"
+                      attributeType="XML"
+                      from="0 0 750 500"
+                      to="200 200 300 220"
+                      dur="1s"
+                      repeatCount="indefinite">
+                      
+                      
+        </animate>
+   
+    <use x="0" y="0" href="#jumper" />
+    
+    
+    
+
+
 </svg>
