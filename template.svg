@@ -79,10 +79,31 @@ h50v-500h50v500h50
 </text>
 <!-- end draw grid -->
   <!--<polyline stroke="#000" stroke-width="5" fill="none" points="15,470 112,35 450,355 220,370 500,50 725,490 "/>-->
+<defs>
 
+<g id="montagne" stroke-width="1" stroke="#000" fill="grey">
+  <polygon points="300 70, 600 600, 10 600" id="triangle" fill="grey"/>
+  <polygon points="300 70, 357 170, 245 170" id="triangle_neige" fill="white"/>
+</g>
 
-     <polygon points="300 70, 600 470, 10 470" id="triangle"/>
+<g id="gp_mont" stroke-width="1" stroke="#000" fill="grey">
+  <use x="100" y="60" href="#montagne"/>
+  <use x="" y="40" href="#montagne"/>
+  <use x="210" y="10" href="#montagne"/>
+  <use x="-270" y="120" href="#montagne"/>
+  <use x="-150" y="80" href="#montagne"/>
+  <use x="-150" y="80" href="#montagne"/>
+  <use x="350" y="80" href="#montagne"/>
+</g>
 
+</defs>
 
+<use x="0" y="0" href="#gp_mont" ><animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="translate"
+                          from="0,0"
+                          to="200,0"
+                          dur="2s"
+                          repeatCount="indefinite"/></use>
 
 </svg>
