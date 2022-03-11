@@ -1,0 +1,88 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="handson.css" ?> 
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<rect class="background" x="0" y="0" width="750" height="500"  />
+
+
+<!-- draw background grid -->
+<path class="thin" style="stroke-opacity:0.2" d="M0,0
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10
+h750v10h-750v10
+h750v-500h-750v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500h10v-500h10v500
+h10v-500h10v500" />
+<path class="outline" style="stroke-opacity:0.2" d="M0,0
+h750v50h-750v50h750v50h-750v50
+h750v50h-750v50h750v50h-750v50
+h750v50h-750v50
+h750v-500h-750v500
+h50v-500h50v500h50v-500h50v500
+h50v-500h50v500h50v-500h50v500*
+h50v-500h50v500h50v-500h50v500
+h50v-500h50v500h50
+"/>
+<text x="0" style="text-anchor:middle;font-size:10px">
+<tspan x="50" y="10">50</tspan>
+<tspan x="100" y="10">100</tspan>
+<tspan x="150" y="10">150</tspan>
+<tspan x="200" y="10">200</tspan>
+<tspan x="250" y="10">250</tspan>
+<tspan x="300" y="10">300</tspan>
+<tspan x="350" y="10">350</tspan>
+<tspan x="400" y="10">400</tspan>
+<tspan x="450" y="10">450</tspan>
+<tspan x="500" y="10">500</tspan>
+<tspan x="550" y="10">550</tspan>
+<tspan x="600" y="10">600</tspan>
+<tspan x="650" y="10">650</tspan>
+<tspan x="700" y="10">700</tspan>
+</text>
+<text style="text-anchor:start;font-size:10px">
+<tspan x="730" y="53">50</tspan>
+<tspan x="730" y="103">100</tspan>
+<tspan x="730" y="153">150</tspan>
+<tspan x="730" y="203">200</tspan>
+<tspan x="730" y="253">250</tspan>
+<tspan x="730" y="303">300</tspan>
+<tspan x="730" y="353">350</tspan>
+<tspan x="730" y="403">400</tspan>
+<tspan x="730" y="453">450</tspan>
+
+</text>
+<!-- end draw grid -->
+  <!--<polyline stroke="#000" stroke-width="5" fill="none" points="15,470 112,35 450,355 220,370 500,50 725,490 "/>-->
+
+
+
+  <polygon points="300 70, 600 600, 10 600" id="triangle" fill="grey"/>
+  <polygon points="300 70, 357 170, 245 170" id="triangle_neige" fill="white"/>
+
+</svg>
