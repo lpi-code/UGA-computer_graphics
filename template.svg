@@ -14,9 +14,7 @@ h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
+h750v10h-750v10h750v10h-750v10 
 h750v10h-750v10h750v10h-750v10
 h750v10h-750v10
 h750v-500h-750v500
@@ -33,15 +31,7 @@ h10v-500h10v500h10v-500h10v500
 h10v-500h10v500h10v-500h10v500
 h10v-500h10v500h10v-500h10v500
 h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500" />
-<path class="outline" style="stroke-opacity:0.2" d="M0,0
-h750v50h-750v50h750v50h-750v50
-h750v50h-750v50h750v50h-750v50
+h10v-500h10v500h10v-500h10v500 
 h750v50h-750v50
 h750v-500h-750v500
 h50v-500h50v500h50v-500h50v500
@@ -78,7 +68,25 @@ h50v-500h50v500h50
 
 </text>
 <!-- end draw grid -->
-<path d="M 0 0 c 0, 0, 400, 250, 600, 400" fill="chartreuse" />
+<defs>
+<g id="jumper_body" stroke-width="1">
+    <ellipse cx="350" cy="250" rx="35" ry="60" />
+    <ellipse cx="350" cy="310" rx="20" ry="40"/>
+</g>
 
+<g id="jumper_head" stroke-width="1" fill="pink">
+    <circle cx="350" cy="175" r="30" />
+</g>
+<g id="skies" stroke-width="1" fill="green">
+    <polygon points="250, 350, 250, 330, 550, 330, 530, 350" />
+</g>
 
+<g id="jumper" stroke-width="1" transform="scale(0.6)" viewBox="0 0 10 0">
+    <use xlink:href="#jumper_body" />
+    <use xlink:href="#jumper_head" />
+    <use xlink:href="#skies" />
+</g>
+<path id="path_tremplin" d="M0, 108, 70,108 C192,291 241,322 330,225"/>
+</defs>
+    
 </svg>
