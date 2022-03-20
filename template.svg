@@ -98,6 +98,8 @@ h50v-500h50v500h50
   <use x="350" y="80" href="#montagne"/>
 </g>
 
+
+
 <g id="jumper" stroke-width="1" transform="scale(0.6) translate(-280, -140)" viewBox="0 0 10 0">
     <use xlink:href="#jumper_body" />
     <use xlink:href="#jumper_head" />
@@ -118,18 +120,32 @@ h50v-500h50v500h50
 <path id="path_tremplin" d="M 0 108 L 70 108 C 142 257 217 290 409 203"/>
 </defs>
 
-<use x="0" y="0" href="#gp_mont" ><!--<animateTransform attributeName="transform"
+<use x="0" y="0" href="#gp_mont" ><animateTransform attributeName="transform"
     attributeType="XML"
     type="translate"
     from="0,0"
-    to="-1200,0"
+    to="-120,0"
+    begin="4s"
     dur="5s"
-    repeatCount="indefinite"/>--></use>
+    repeatCount="1"/></use>
 
+<use x="0" y="200" href="#montagne"><animateTransform attributeName="transform"
+    attributeType="XML"
+    type="translate"
+    from="0,0"
+    to="-300,0"
+    begin="4s"
+    dur="5s"
+    repeatCount="1"/></use>
+  <!--
 <use x="0" y="0" href="#rocket" ></use>
+<<<<<<< HEAD
 
 
 
+=======
+--!>
+>>>>>>> 329a4de7adb55690fe265d0aeade2d15f2df172b
  <!--   <use x="0" y="0" href="#jumper" ><animateTransform attributeName="transform"
                           attributeType="XML"
                           type="translate"
@@ -137,35 +153,32 @@ h50v-500h50v500h50
                           to="200,0"
                           dur="2s"
                           repeatCount="indefinite"/></use>
+    -->
 
-    <animate attributeName="viewBox"
-                      attributeType="XML"
-                      from="0 0 750 500"
-                      to="0 0 300 220"
-                      begin="0s"
-                      dur="1s"
-                      repeatCount="1">
-                      
-                      
-        </animate>
-
-      <animate attributeName="viewBox"
-                      attributeType="XML"
-                      from="0 0 300 220"
-                      
-                      begin="5s"
-                      dur="1s"
-                      repeatCount="indefinite">
-                      
-        <mpath xlink:href="#path_tremplin"/>
-        </animate>
- 
-       
+    <svg width="750" height="500" viewBox="0 0 200 200">
+    <use x="0" y="0" href="#jumper" fill="white">
+      <animateMotion attributeName="transform"
+                     dur="3s"
+                     begin="4s"
+                     repeatCount="1"
+                     begin="0s"
+                     rotate="auto"
+                     fill="freeze"
+                     path="M0, 108, 70,108 C192,291 241,322 330,225"/>
+    </use>
    
+<<<<<<< HEAD
     <use x="0" y="0" href="#jumper" />-->
     
     <use x="0" y="0" href="#path_tremplin" />
+=======
     
+    <animate attributeName="viewBox" dur="2s" repeatCount="1" from="0 0 750 500" to="0 0 200 200"/>
+    <animate attributeName="viewBox" dur="2.5s" begin="3.5s" repeatCount="1" from="0 0 200 200" to="200 200 500 600"/>
+    <animate attributeName="viewBox" dur="2s" begin="6s" repeatCount="1" from="200 200 500 600" to="400 -100 600 600"/>
+>>>>>>> 329a4de7adb55690fe265d0aeade2d15f2df172b
+    
+    </svg>
 
 
 </svg>
