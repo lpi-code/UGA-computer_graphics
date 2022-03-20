@@ -139,11 +139,7 @@ h50v-500h50v500h50
     repeatCount="1"/></use>
   <!--
 <use x="0" y="0" href="#rocket" ></use>
-
-
-
---!>
- <!--   <use x="0" y="0" href="#jumper" ><animateTransform attributeName="transform"
+   <use x="0" y="0" href="#jumper" ><animateTransform attributeName="transform"
                           attributeType="XML"
                           type="translate"
                           from="0,0"
