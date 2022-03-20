@@ -97,8 +97,6 @@ h50v-500h50v500h50
   <use x="-150" y="80" href="#montagne"/>
   <use x="350" y="80" href="#montagne"/>
 </g>
-tranform
-
 
 <g id="jumper" stroke-width="1" transform="scale(0.6) translate(-280, -140)" viewBox="0 0 10 0">
     <use xlink:href="#jumper_body" />
@@ -109,6 +107,8 @@ tranform
 <g id="rocket" stroke-width="1" fill="black">
     <rect x="70" y="160" width="100" height="30" />
     <polygon points="200 175, 170 190, 170 160" id="triangle" fill="black"/>
+    <polygon points="90 190, 120 190, 97 200, 85 200" id="triangle_neige" fill="black"/>
+    <polygon points="90 160, 120 160, 97 150, 85 150" id="triangle_neige" fill="black"/>
 </g>
 
 <g id="vent" stroke-width="1" fill="black">
@@ -117,23 +117,25 @@ tranform
 
 <path id="path_tremplin" d="M0, 108, 70,108 C192,291 241,322 330,225"/>
 </defs>
-<!--
-    <use x="0" y="0" href="#gp_mont" ><animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="translate"
-                          from="0,0"
-                          to="-1200,0"
-                          dur="5s"
-                          repeatCount="indefinite"/></use>
 
-    <use x="0" y="0" href="#jumper" ><animateTransform attributeName="transform"
+<use x="0" y="0" href="#gp_mont" ><!--<animateTransform attributeName="transform"
+    attributeType="XML"
+    type="translate"
+    from="0,0"
+    to="-1200,0"
+    dur="5s"
+    repeatCount="indefinite"/>--></use>
+
+<use x="0" y="0" href="#rocket" ></use>
+
+ <!--   <use x="0" y="0" href="#jumper" ><animateTransform attributeName="transform"
                           attributeType="XML"
                           type="translate"
                           from="0,0"
                           to="200,0"
                           dur="2s"
                           repeatCount="indefinite"/></use>
-    -->
+
     <animate attributeName="viewBox"
                       attributeType="XML"
                       from="0 0 750 500"
@@ -158,7 +160,7 @@ tranform
  
        
    
-    <use x="0" y="0" href="#jumper" />
+    <use x="0" y="0" href="#jumper" />-->
     
     
     
