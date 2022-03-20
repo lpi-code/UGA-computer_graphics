@@ -1,0 +1,40 @@
+body {
+background: #000000; 
+background: -moz-linear-gradient(top,  #000000 1%, #061a21 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#000000), color-stop(100%,#061a21)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #000000 1%,#061a21 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #000000 1%,#061a21 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #000000 1%,#061a21 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #000000 1%,#061a21 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#061a21',GradientType=0 ); /* IE6-8 */
+
+  overflow: hidden;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  max-width: 100%;
+  height: 600px;
+}
+
+svg {
+  max-width: 100%;
+  visibility: hidden;
+  overflow: visible;
+}
+
+#bg {
+  width: 100%;
+  overflow: visible;
+}
+.bgSVG{
+  width:100%;
+}
