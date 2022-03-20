@@ -14,7 +14,7 @@ h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10 
+h750v10h-750v10h750v10h-750v10
 h750v10h-750v10h750v10h-750v10
 h750v10h-750v10
 h750v-500h-750v500
@@ -124,17 +124,29 @@ tranform
                           dur="2s"
                           repeatCount="indefinite"/></use>
     -->
-    
- 
-       <animate attributeName="viewBox"
+    <animate attributeName="viewBox"
                       attributeType="XML"
                       from="0 0 750 500"
-                      to="200 200 300 220"
+                      to="0 0 300 220"
+                      begin="0s"
                       dur="1s"
-                      repeatCount="indefinite">
+                      repeatCount="1">
                       
                       
         </animate>
+
+      <animate attributeName="viewBox"
+                      attributeType="XML"
+                      from="0 0 300 220"
+                      
+                      begin="5s"
+                      dur="1s"
+                      repeatCount="indefinite">
+                      
+        <mpath xlink:href="#path_tremplin"/>
+        </animate>
+ 
+       
    
     <use x="0" y="0" href="#jumper" />
     
