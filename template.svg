@@ -163,11 +163,6 @@ h50v-500h50v500h50
                      fill="freeze"
                      path="M0, 108, 70,108 C192,291 241,322 330,225"/>
     </use>
-   
-    <use x="0" y="0" href="#jumper" />-->
-    
-    <use x="0" y="0" href="#path_tremplin" />
-    
     <animate attributeName="viewBox" dur="2s" repeatCount="1" from="0 0 750 500" to="0 0 200 200"/>
     <animate attributeName="viewBox" dur="2.5s" begin="3.5s" repeatCount="1" from="0 0 200 200" to="200 200 500 600"/>
     <animate attributeName="viewBox" dur="2s" begin="6s" repeatCount="1" from="200 200 500 600" to="400 -100 600 600"/>
