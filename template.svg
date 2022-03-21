@@ -1,73 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="handson.css" ?> 
 <svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<rect class="background" x="0" y="0" width="750" height="500"  />
 
-
-<!-- draw background grid -->
-<path class="thin" style="stroke-opacity:0.2" d="M0,0
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10h750v10h-750v10
-h750v10h-750v10
-h750v-500h-750v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500
-h10v-500h10v500h10v-500h10v500 
-h750v50h-750v50
-h750v-500h-750v500
-h50v-500h50v500h50v-500h50v500
-h50v-500h50v500h50v-500h50v500*
-h50v-500h50v500h50v-500h50v500
-h50v-500h50v500h50
-"/>
-<text x="0" style="text-anchor:middle;font-size:10px">
-<tspan x="50" y="10">50</tspan>
-<tspan x="100" y="10">100</tspan>
-<tspan x="150" y="10">150</tspan>
-<tspan x="200" y="10">200</tspan>
-<tspan x="250" y="10">250</tspan>
-<tspan x="300" y="10">300</tspan>
-<tspan x="350" y="10">350</tspan>
-<tspan x="400" y="10">400</tspan>
-<tspan x="450" y="10">450</tspan>
-<tspan x="500" y="10">500</tspan>
-<tspan x="550" y="10">550</tspan>
-<tspan x="600" y="10">600</tspan>
-<tspan x="650" y="10">650</tspan>
-<tspan x="700" y="10">700</tspan>
-</text>
-<text style="text-anchor:start;font-size:10px">
-<tspan x="730" y="53">50</tspan>
-<tspan x="730" y="103">100</tspan>
-<tspan x="730" y="153">150</tspan>
-<tspan x="730" y="203">200</tspan>
-<tspan x="730" y="253">250</tspan>
-<tspan x="730" y="303">300</tspan>
-<tspan x="730" y="353">350</tspan>
-<tspan x="730" y="403">400</tspan>
-<tspan x="730" y="453">450</tspan>
-
-</text>
-<!-- end draw grid -->
 <defs>
 <g id="jumper_body" stroke-width="1">
     <ellipse cx="350" cy="250" rx="35" ry="60" />
@@ -100,7 +34,7 @@ h50v-500h50v500h50
 
 
 
-<g id="jumper" stroke-width="1" transform="scale(0.6) translate(-280, -140)" viewBox="0 0 10 0">
+<g id="jumper" stroke-width="1" transform="scale(0.2) translate(-390, -425)" viewBox="0 0 10 0">
     <use xlink:href="#jumper_body" />
     <use xlink:href="#jumper_head" />
     <use xlink:href="#skies" />
@@ -117,57 +51,39 @@ h50v-500h50v500h50
     <line x="50" y="160" width="15" height="3" id="vent" fill="black"/>
 </g>
 
-<path id="path_tremplin" d="M 0 108 L 70 108 C 142 257 217 290 409 203"/>
+<path id="path_tremplin" d="M 0.0 103.8 L 39.0 103.8 C 62.4 109.8 76.8 123.0 81.0 144.0 C 88.2 174.6 93.0 226.2 130.2 249.0 C 167.4 271.8 194.4 268.8 194.4 268.2 C 227.4 262.8 250.79999999999998 249.6 264.59999999999997 228.0 " />
+
+<g id="tremplin" stroke-width="1" fill="gray">
+<rect x="20" y="100" width="15" height="300" id="vent"/>
+<rect x="60" y="120" width="15" height="280" id="vent"/>
+<rect x="100" y="220" width="15" height="180" id="vent"/>
+<rect x="140" y="260" width="15" height="140" id="vent"/>
+<rect x="180" y="260" width="15" height="140" id="vent"/>
+<rect x="220" y="260" width="15" height="140" id="vent"/>
+<rect x="255" y="230" width="15" height="170" id="vent"/>
+  <use xlink:href="#path_tremplin" stroke="#f56200" fill="none" stroke-width="30" />
+
+</g>
 </defs>
+  <use xlink:href="#tremplin"/>
 
-<use x="0" y="0" href="#gp_mont" ><animateTransform attributeName="transform"
-    attributeType="XML"
-    type="translate"
-    from="0,0"
-    to="-120,0"
-    begin="4s"
-    dur="5s"
-    repeatCount="1"/></use>
-
-<use x="0" y="200" href="#montagne"><animateTransform attributeName="transform"
-    attributeType="XML"
-    type="translate"
-    from="0,0"
-    to="-300,0"
-    begin="4s"
-    dur="5s"
-    repeatCount="1"/></use>
-  <!--
-<use x="0" y="0" href="#rocket" ></use>
-
-
-
---!>
- <!--   <use x="0" y="0" href="#jumper" ><animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="translate"
-                          from="0,0"
-                          to="200,0"
-                          dur="2s"
-                          repeatCount="indefinite"/></use>
-    -->
-
-    <svg width="750" height="500" viewBox="0 0 200 200">
-    <use x="0" y="0" href="#jumper" fill="white">
-      <animateMotion attributeName="transform"
-                     dur="3s"
-                     begin="4s"
-                     repeatCount="1"
-                     begin="0s"
-                     rotate="auto"
-                     fill="freeze"
-                     path="M0, 108, 70,108 C192,291 241,322 330,225"/>
-    </use>
-    <animate attributeName="viewBox" dur="2s" repeatCount="1" from="0 0 750 500" to="0 0 200 200"/>
-    <animate attributeName="viewBox" dur="2.5s" begin="3.5s" repeatCount="1" from="0 0 200 200" to="200 200 500 600"/>
-    <animate attributeName="viewBox" dur="2s" begin="6s" repeatCount="1" from="200 200 500 600" to="400 -100 600 600"/>
+  <use xlink:href="#jumper" y="0">
+  
+  <animateMotion dur="2s" rotate="auto"  keyPoints="0;0.1 ; 0.2; 0.5; 0.9; 1" keyTimes="0; 0.35; 0.45; 0.6; 0.8; 1" calcMode="linear">
+    <mpath xlink:href="#path_tremplin"/>
     
-    </svg>
+  </animateMotion>
+  <animateTransform
+    attributeName='transform'
+    type="translate"
+    from="250.79999999999998 249.6"
+    to="500,100"
+    begin="2s"
+    dur="3s"
+    repeatCount="indefinite"
+    rotate="auto"
+/>
+  </use>
 
 
 </svg>
