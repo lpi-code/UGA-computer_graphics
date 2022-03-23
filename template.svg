@@ -34,12 +34,15 @@
 
 
 
-<g id="jumper" stroke-width="1" transform="scale(0.2) translate(-390, -425)" viewBox="0 0 10 0">
+<g id="jumper" stroke-width="1" transform="scale(0.2) translate(-390, -425)" >
     <use xlink:href="#jumper_body" />
     <use xlink:href="#jumper_head" />
     <use xlink:href="#skies" />
 </g>
 
+<g id="jumper_rotated" stroke-width="1" transform="rotate(-45)" >
+    <use xlink:href="#jumper"/>
+</g>
 <g id="rocket" stroke-width="1" fill="black">
     <rect x="70" y="160" width="100" height="30" />
     <polygon points="200 175, 170 190, 170 160" id="triangle" fill="black"/>
@@ -53,7 +56,7 @@
 
 <path id="path_tremplin" d="M 0.0 103.8 L 39.0 103.8 C 62.4 109.8 76.8 123.0 81.0 144.0 C 88.2 174.6 93.0 226.2 130.2 249.0 C 167.4 271.8 194.4 268.8 194.4 268.2 C 227.4 262.8 250 250 264 228 " />
 <path id="path_vol" d="m 250 250 l 400 -400"/>
-<g id="tremplin" stroke-width="1" fill="gray">
+<g id="tremplin" stroke-width="1" fill="#291919">
 <rect x="20" y="100" width="15" height="300" id="vent"/>
 <rect x="60" y="120" width="15" height="280" id="vent"/>
 <rect x="100" y="220" width="15" height="180" id="vent"/>
@@ -71,21 +74,45 @@
 </g>
 
 <g id="cloud" >
+  <rect x="20" y="20" width="100" height="50" />
   <circle cx="20" cy="45" r="25" />
   <circle cx="35" cy="25" r="20"  />
   <circle cx="80" cy="25" r="35"  />
   <circle cx="120" cy="40" r="30"/>
-  <rect x="20" y="20" width="100" height="50" />
-  <animateTransform id="hover1" begin="0;hover2.end" attributeName="transform" type="translate" from="0 0" to="0 -20" dur="5s" repeatCount="1" />
-  <animateTransform id="hover2" begin="hover1.end" attributeName="transform" type="translate" from="0 -20" to="0 0" dur="5s" repeatCount="1" />
+
+  <animateTransform id="hover1" begin="0;hover2.end" attributeName="transform" type="translate" from="0 0" to="-10 -20" dur="5s" repeatCount="1" />
+  <animateTransform id="hover2" begin="hover1.end" attributeName="transform" type="translate" from="-10 -20" to="0 0" dur="5s" repeatCount="1" />
+  
+
 </g>
+
+<linearGradient id="Gradient1" x1="0%" x2="0%" y1="0%" y2="100%" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" style="stop-color:rgb(220,220,220);stop-opacity:1"/>
+        <stop offset="70%" style="stop-color:rgb(25,25,25);stop-opacity:1"/>
+      </linearGradient>
 </defs>
 
-<rect x="0" y="0" width="750" height="500" fill="lightblue" />
-<rect x="0" y="200" width="50" height="500" fill="darkgray" />
-<use xlink:href="#cloud" fill="white" y="100" x="100" transform="scale(0.7)"/>
-<use xlink:href="#cloud" fill="white" y="100" x="100" transform="scale(0.5)"/>
-<use xlink:href="#cloud" fill="white" y="150" x="400"/>
+
+
+<rect x="0" y="0" width="750" height="500" fill="lightblue" >
+<animate attributeName="fill" values="lightblue;blue;darkblue; black" dur="15s" begin="final_jumper_move.end+7s" repeatCount="1"  />
+</rect>
+<use xlink:href="#cloud" fill="url(#Gradient1)" y="150" x="150"/>
+
+<use xlink:href="#gp_mont" fill="white" y="0" x="00">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-270 500" dur="13s" begin="final_jumper_move.end" repeatCount="1"/>
+    <animateTransform attributeName="transform" type="translate" from="-270 500" to="-270 500" dur="7s" begin="fastest_mooving_away_element_animation.end" repeatCount="indefinite"/>
+
+</use>
+
+<use xlink:href="#gp_mont" fill="white" y="150" x="400">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-270 500" dur="7s" begin="final_jumper_move.end" repeatCount="1" id="fastest_mooving_away_element_animation"/>
+    <animateTransform attributeName="transform" type="translate" from="-270 500" to="-270 500" dur="7s" begin="fastest_mooving_away_element_animation.end" repeatCount="indefinite"/>
+
+</use>
+<rect x="0" y="200" width="50" height="500" fill="#291919" />
+<use xlink:href="#cloud" fill="url(#Gradient1)" y="100" x="100" transform="scale(0.7)"/>
+<use xlink:href="#cloud" fill="url(#Gradient1)" y="100" x="100" transform="scale(0.5)"/>
 
 
 <svg x="50" y="200" viewBox="0 200 600 600" height="1000" width="600">
@@ -96,14 +123,30 @@
     <mpath xlink:href="#path_tremplin"/>
     
   </animateMotion>
-    <animateMotion begin="8s" dur="4s" rotate="auto" >
+    <animateMotion begin="8s" dur="4s" rotate="auto" id="vol_2" >
       <mpath xlink:href="#path_vol"/>
     </animateMotion>
 
   </use>
 </svg>
+<use xlink:href="#jumper_rotated" fill="black"  transform="rotate(-45)" y="0" x="0">
+  <animateTransform attributeName="transform" type="translate" rotate="auto"  from="500 250" to="500 250" dur="0.1s" begin="10s" repeatCount="indefinite" />
+  <animateTransform attributeName="transform" type="translate" rotate="auto"  from="-500 -250" to="-500 -250" dur="1s" begin="9s" repeatCount="1" id="final_jumper_move" />
 
-<use xlink:href="#cloud" fill="white" y="150" x="400" transform="scale(0.9)"/>
-<animate attributeName="viewBox" from="0 0 750 500" to="200 300 200 300" dur="2s">
-</animate>
+
+</use>
+<use xlink:href="#cloud" fill="url(#Gradient1)"  x="420" y="175">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-270 500" dur="9s" begin="final_jumper_move.end" repeatCount="1"/>
+        <animateTransform attributeName="transform" type="translate" from="-270 500" to="-270 500" dur="7s" begin="fastest_mooving_away_element_animation.end" repeatCount="indefinite"/>
+
+</use>
+<animate id="zoom_in" attributeName="viewBox" from="0 0 750 500" to="50 100 400 300" dur="3s"/>
+
+<animate id="follow_1" attributeName="viewBox" from="50 100 400 300" to="120 200 400 300 " dur="4s" begin="zoom_in.end"/>
+<animate id="zoom_out" attributeName="viewBox" from="120 200 400 300" to="200 150 400 300 " dur="2s" begin="follow_1.end"/>
+<animate id="zoom_in_2" attributeName="viewBox" from="200 150 400 300" to="400 75 200 200 " dur="5s" begin="zoom_out.end"/>
+<animate id="freeze" attributeName="viewBox" from="400 75 200 200" to="400 75 200 200 " dur="indefinite" begin="zoom_in_2.end"/>
+
+
+
 </svg>
