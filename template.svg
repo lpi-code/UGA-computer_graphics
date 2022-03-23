@@ -40,15 +40,13 @@
     <use xlink:href="#skies" />
 </g>
 
-<g id="jumper_rotated" stroke-width="1" transform="rotate(-45)" >
-    <use xlink:href="#jumper"/>
+<g id="jumper_rotated" stroke-width="1"  >
+    <use xlink:href="#jumper" transform="rotate(-45)"/>
+    <animateTransform id="hover1_j" begin="final_jumper_move.end+10s;hover2_j.end" attributeName="transform" type="translate" from="0 0" to="-15 -5" dur="5s" repeatCount="1" />
+  <animateTransform id="hover2_j" begin="hover1_j.end" attributeName="transform" type="translate" from="-15 -5" to="0 0" dur="5s" repeatCount="1" />
+
 </g>
-<g id="rocket" stroke-width="1" fill="black">
-    <rect x="70" y="160" width="100" height="30" />
-    <polygon points="200 175, 170 190, 170 160" id="triangle" fill="black"/>
-    <polygon points="90 190, 120 190, 97 200, 85 200" id="triangle_neige" fill="grey"/>
-    <polygon points="90 160, 120 160, 97 150, 85 150" id="triangle_neige" fill="grey"/>
-</g>
+
 
 <g id="vent" stroke-width="1" fill="black">
     <line x="50" y="160" width="15" height="3" id="vent" fill="black"/>
@@ -80,8 +78,8 @@
   <circle cx="80" cy="25" r="35"  />
   <circle cx="120" cy="40" r="30"/>
 
-  <animateTransform id="hover1" begin="0;hover2.end" attributeName="transform" type="translate" from="0 0" to="-10 -20" dur="5s" repeatCount="1" />
-  <animateTransform id="hover2" begin="hover1.end" attributeName="transform" type="translate" from="-10 -20" to="0 0" dur="5s" repeatCount="1" />
+      <animateTransform id="hover1" begin="0;hover2.end" attributeName="transform" type="translate" from="0 0" to="-10 -30" dur="5s" repeatCount="1" />
+  <animateTransform id="hover2" begin="hover1.end" attributeName="transform" type="translate" from="-10 -30" to="0 0" dur="5s" repeatCount="1" />
   
 
 </g>
@@ -90,20 +88,188 @@
     <stop offset="0%" style="stop-color:rgb(220,220,220);stop-opacity:1"/>
         <stop offset="70%" style="stop-color:rgb(25,25,25);stop-opacity:1"/>
       </linearGradient>
+<!-- rocketship def -->
+<mask id="mask_rocket">
+<rect x="0" y="0" width="400" height="300" fill="white"/>
+    <circle cx="70" cy="230" r="50" fill="black"/>
+</mask>
+<g id="flame" transform="scale(10)">
+    <path d="M 4 0 q -3 2 1 6 q 4 -4 1 -6"/>
+</g>
+
+<g id="flames">
+<use xlink:href="#flame" transform="translate(0,0)" fill="yellow"/>
+<use xlink:href="#flame" transform="translate(15,0) scale(0.7)" fill="orange"/>
+<use xlink:href="#flame" transform="translate(25,0) scale(0.5)" fill="#ff3c00"/>
+</g>
+<linearGradient id="gradient_hatch" x1="0%" x2="100%" y1="0%" y2="100%" >
+    <stop offset="0%" style="stop-color:rgb(51, 153, 255);stop-opacity:1"/>
+        <stop offset="100%" style="stop-color:rgb(0, 0, 255);stop-opacity:1"/>
+    </linearGradient>
+<g id="rocket" transform="scale(0.4)">
+<circle cx="70" cy="200" r="65" fill="darkred" mask="url(#mask_rocket)"/>
+<svg viewBox="0 0 120 220" width="120" height="200">
+<ellipse  height="20" cx="70" cy="150" rx="50" ry="100" fill="#6b6969" />
+</svg>
+<circle cx="70" cy="90" r="15" fill="url(#gradient_hatch)" />
+<use xlink:href="#flames" y="200" x="20"/>
+</g>
+
 </defs>
 
 
 
 <rect x="0" y="0" width="750" height="500" fill="lightblue" >
-<animate attributeName="fill" values="lightblue;blue;darkblue; black" dur="15s" begin="final_jumper_move.end+7s" repeatCount="1"  />
-</rect>
-<use xlink:href="#cloud" fill="url(#Gradient1)" y="150" x="150"/>
+<!-- space sky overlay -->
 
-<use xlink:href="#gp_mont" fill="white" y="0" x="00">
-    <animateTransform attributeName="transform" type="translate" from="0 0" to="-270 500" dur="13s" begin="final_jumper_move.end" repeatCount="1"/>
-    <animateTransform attributeName="transform" type="translate" from="-270 500" to="-270 500" dur="7s" begin="fastest_mooving_away_element_animation.end" repeatCount="indefinite"/>
+<animate id="to_space_fill" attributeName="fill" values="lightblue;blue;darkblue; black" dur="15s" begin="final_jumper_move.end+7s" repeatCount="1"  />
+<animate attributeName="fill" values="black" begin="to_space_fill.end" repeatCount="indefinite" dur="2s"  />
+
+
+</rect>
+<svg x="300" y="75" viewBox="0 0 400 300" height="300" width="400" opacity="0">
+  <circle cx="296" cy="183" r="0.2" fill="white"/>
+<circle cx="347" cy="2" r="0.7" fill="white"/>
+<circle cx="274" cy="133" r="0.2" fill="white"/>
+<circle cx="291" cy="179" r="0.2" fill="white"/>
+<circle cx="376" cy="280" r="0.3" fill="white"/>
+<circle cx="268" cy="296" r="0.7" fill="white"/>
+<circle cx="352" cy="162" r="0.2" fill="white"/>
+<circle cx="132" cy="214" r="0.3" fill="white"/>
+<circle cx="393" cy="238" r="0.3" fill="white"/>
+<circle cx="66" cy="12" r="0.3" fill="white"/>
+<circle cx="346" cy="86" r="0.7" fill="white"/>
+<circle cx="35" cy="0" r="0.5" fill="white"/>
+<circle cx="211" cy="220" r="0.2" fill="white"/>
+<circle cx="306" cy="106" r="0.5" fill="white"/>
+<circle cx="195" cy="5" r="0.5" fill="white"/>
+<circle cx="203" cy="23" r="0.2" fill="white"/>
+<circle cx="183" cy="243" r="0.3" fill="white"/>
+<circle cx="100" cy="29" r="0.2" fill="white"/>
+<circle cx="355" cy="178" r="0.7" fill="white"/>
+<circle cx="208" cy="203" r="0.7" fill="white"/>
+<circle cx="291" cy="190" r="0.5" fill="white"/>
+<circle cx="180" cy="289" r="0.2" fill="white"/>
+<circle cx="172" cy="170" r="0.7" fill="white"/>
+<circle cx="228" cy="37" r="0.3" fill="white"/>
+<circle cx="374" cy="124" r="0.7" fill="white"/>
+<circle cx="331" cy="109" r="0.7" fill="white"/>
+<circle cx="292" cy="134" r="0.5" fill="white"/>
+<circle cx="112" cy="283" r="0.7" fill="white"/>
+<circle cx="314" cy="300" r="0.7" fill="white"/>
+<circle cx="50" cy="53" r="0.7" fill="white"/>
+<circle cx="205" cy="55" r="0.5" fill="white"/>
+<circle cx="245" cy="282" r="0.7" fill="white"/>
+<circle cx="90" cy="123" r="0.3" fill="white"/>
+<circle cx="196" cy="140" r="0.5" fill="white"/>
+<circle cx="6" cy="175" r="0.2" fill="white"/>
+<circle cx="260" cy="231" r="0.7" fill="white"/>
+<circle cx="254" cy="113" r="0.3" fill="white"/>
+<circle cx="63" cy="223" r="0.5" fill="white"/>
+<circle cx="159" cy="176" r="0.5" fill="white"/>
+<circle cx="121" cy="288" r="0.5" fill="white"/>
+<circle cx="275" cy="160" r="0.2" fill="white"/>
+<circle cx="72" cy="148" r="0.7" fill="white"/>
+<circle cx="47" cy="259" r="0.7" fill="white"/>
+<circle cx="268" cy="270" r="0.2" fill="white"/>
+<circle cx="136" cy="261" r="0.7" fill="white"/>
+<circle cx="165" cy="173" r="0.3" fill="white"/>
+<circle cx="221" cy="168" r="0.3" fill="white"/>
+<circle cx="204" cy="221" r="0.5" fill="white"/>
+<circle cx="258" cy="297" r="0.2" fill="white"/>
+<circle cx="399" cy="164" r="0.3" fill="white"/>
+<circle cx="184" cy="12" r="0.5" fill="white"/>
+<circle cx="226" cy="121" r="0.3" fill="white"/>
+<circle cx="340" cy="131" r="0.3" fill="white"/>
+<circle cx="152" cy="266" r="0.2" fill="white"/>
+<circle cx="345" cy="210" r="0.5" fill="white"/>
+<circle cx="351" cy="218" r="0.5" fill="white"/>
+<circle cx="30" cy="295" r="0.2" fill="white"/>
+<circle cx="209" cy="214" r="0.3" fill="white"/>
+<circle cx="235" cy="264" r="0.2" fill="white"/>
+<circle cx="245" cy="218" r="0.3" fill="white"/>
+<circle cx="134" cy="123" r="0.2" fill="white"/>
+<circle cx="275" cy="272" r="0.5" fill="white"/>
+<circle cx="218" cy="53" r="0.5" fill="white"/>
+<circle cx="21" cy="206" r="0.2" fill="white"/>
+<circle cx="31" cy="274" r="0.3" fill="white"/>
+<circle cx="0" cy="129" r="0.2" fill="white"/>
+<circle cx="131" cy="195" r="0.2" fill="white"/>
+<circle cx="238" cy="14" r="0.7" fill="white"/>
+<circle cx="216" cy="259" r="0.7" fill="white"/>
+<circle cx="211" cy="240" r="0.5" fill="white"/>
+<circle cx="60" cy="32" r="0.3" fill="white"/>
+<circle cx="94" cy="209" r="0.2" fill="white"/>
+<circle cx="67" cy="21" r="0.7" fill="white"/>
+<circle cx="69" cy="79" r="0.5" fill="white"/>
+<circle cx="130" cy="55" r="0.3" fill="white"/>
+<circle cx="105" cy="47" r="0.3" fill="white"/>
+<circle cx="102" cy="68" r="0.5" fill="white"/>
+<circle cx="350" cy="208" r="0.3" fill="white"/>
+<circle cx="375" cy="188" r="0.3" fill="white"/>
+<circle cx="180" cy="81" r="0.5" fill="white"/>
+<circle cx="55" cy="80" r="0.5" fill="white"/>
+<circle cx="106" cy="242" r="0.5" fill="white"/>
+<circle cx="243" cy="58" r="0.7" fill="white"/>
+<circle cx="362" cy="129" r="0.7" fill="white"/>
+<circle cx="297" cy="274" r="0.3" fill="white"/>
+<circle cx="371" cy="48" r="0.2" fill="white"/>
+<circle cx="374" cy="105" r="0.2" fill="white"/>
+<circle cx="124" cy="244" r="0.5" fill="white"/>
+<circle cx="358" cy="88" r="0.2" fill="white"/>
+<circle cx="131" cy="148" r="0.3" fill="white"/>
+<circle cx="301" cy="105" r="0.3" fill="white"/>
+<circle cx="325" cy="96" r="0.2" fill="white"/>
+<circle cx="70" cy="110" r="0.2" fill="white"/>
+<circle cx="105" cy="193" r="0.5" fill="white"/>
+<circle cx="347" cy="124" r="0.5" fill="white"/>
+<circle cx="258" cy="85" r="0.7" fill="white"/>
+<circle cx="233" cy="12" r="0.3" fill="white"/>
+<circle cx="351" cy="39" r="0.7" fill="white"/>
+<circle cx="341" cy="216" r="0.3" fill="white"/>
+<circle cx="14" cy="151" r="0.2" fill="white"/>
+<circle cx="354" cy="97" r="0.3" fill="white"/>
+<circle cx="99" cy="13" r="0.2" fill="white"/>
+<circle cx="343" cy="281" r="0.2" fill="white"/>
+<circle cx="373" cy="98" r="0.5" fill="white"/>
+<circle cx="400" cy="158" r="0.5" fill="white"/>
+<circle cx="53" cy="36" r="0.2" fill="white"/>
+<circle cx="209" cy="280" r="0.2" fill="white"/>
+<circle cx="255" cy="299" r="0.5" fill="white"/>
+<circle cx="182" cy="275" r="0.5" fill="white"/>
+<circle cx="195" cy="194" r="0.7" fill="white"/>
+<circle cx="286" cy="177" r="0.2" fill="white"/>
+<circle cx="69" cy="281" r="0.3" fill="white"/>
+<circle cx="306" cy="3" r="0.7" fill="white"/>
+<circle cx="143" cy="172" r="0.3" fill="white"/>
+<circle cx="104" cy="299" r="0.2" fill="white"/>
+<circle cx="158" cy="110" r="0.5" fill="white"/>
+<circle cx="152" cy="215" r="0.5" fill="white"/>
+<circle cx="8" cy="221" r="0.5" fill="white"/>
+<circle cx="36" cy="13" r="0.3" fill="white"/>
+<circle cx="86" cy="134" r="0.2" fill="white"/>
+<animate attributeName="opacity"
+             values="0;1" dur="8s"
+             repeatCount="1" begin="to_space_fill.begin+5s" id="show_stars"/>
+<animate attributeName="opacity"
+             values="1" dur="1s"
+             begin="show_stars.end" repeatCount="indefinite" id="keep_stars"/> 
+
+<use xlink:href="#rocket" transform="translate(-400 -400)">
+      <animateTransform attributeName="transform" type="translate" from="100 500" to="100 -100" dur="10s" begin="to_space_fill.begin+8s" repeatCount="1"/>
 
 </use>
+        
+</svg>
+
+<use xlink:href="#cloud" fill="url(#Gradient1)" transform="translate(150 200) scale(0.6) "/>
+
+<use xlink:href="#gp_mont" fill="white" y="0" x="00">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-370 500" dur="12s" begin="final_jumper_move.end" repeatCount="1"/>
+    <animateTransform attributeName="transform" type="translate" from="-370 500" to="-270 500" dur="7s" begin="fastest_mooving_away_element_animation.end" repeatCount="indefinite"/>
+
+</use>
+<use xlink:href="#cloud" fill="url(#Gradient1)" transform="translate(20 165) scale(0.6) "/>
 
 <use xlink:href="#gp_mont" fill="white" y="150" x="400">
     <animateTransform attributeName="transform" type="translate" from="0 0" to="-270 500" dur="7s" begin="final_jumper_move.end" repeatCount="1" id="fastest_mooving_away_element_animation"/>
@@ -111,41 +277,51 @@
 
 </use>
 <rect x="0" y="200" width="50" height="500" fill="#291919" />
-<use xlink:href="#cloud" fill="url(#Gradient1)" y="100" x="100" transform="scale(0.7)"/>
-<use xlink:href="#cloud" fill="url(#Gradient1)" y="100" x="100" transform="scale(0.5)"/>
+
 
 
 <svg x="50" y="200" viewBox="0 200 600 600" height="1000" width="600">
   <use xlink:href="#tremplin"/>
-  <use xlink:href="#jumper" y="0" transform="">
+  <use xlink:href="#jumper" y="0" fill="red">
   <animateTransform attributeName="transform" type="translate" from="0 105" to="0 105" dur="3s" repeatCount="1" />
   <animateMotion begin="3s" dur="5s" rotate="auto"  keyPoints="0;0.1 ; 0.2; 0.7; 1" keyTimes="0; 0.35; 0.65; 0.9; 1" calcMode="linear">
     <mpath xlink:href="#path_tremplin"/>
-    
   </animateMotion>
     <animateMotion begin="8s" dur="4s" rotate="auto" id="vol_2" >
       <mpath xlink:href="#path_vol"/>
     </animateMotion>
-
   </use>
 </svg>
-<use xlink:href="#jumper_rotated" fill="black"  transform="rotate(-45)" y="0" x="0">
+
+
+<use xlink:href="#cloud" fill="url(#Gradient1)" y="0" x="0" transform="scale(0.5)">
+  <animateTransform attributeName="transform" type="translate" begin="final_jumper_move.end+7s" from="600 100" to="0 400" dur="3s">
+    
+  </animateTransform>
+</use>
+
+<use xlink:href="#cloud" fill="url(#Gradient1)" y="0" x="0" transform="scale(0.5)">
+  <animateTransform attributeName="transform" type="translate" begin="final_jumper_move.end+8s" from="400 100" to="0 500" dur="3s">
+    
+  </animateTransform>
+</use>
+<use xlink:href="#jumper_rotated" fill="red"  transform="rotate(-45)" y="0" x="0">
   <animateTransform attributeName="transform" type="translate" rotate="auto"  from="500 250" to="500 250" dur="0.1s" begin="10s" repeatCount="indefinite" />
   <animateTransform attributeName="transform" type="translate" rotate="auto"  from="-500 -250" to="-500 -250" dur="1s" begin="9s" repeatCount="1" id="final_jumper_move" />
-
-
 </use>
+
+<!-- transition cloud -->
 <use xlink:href="#cloud" fill="url(#Gradient1)"  x="420" y="175">
     <animateTransform attributeName="transform" type="translate" from="0 0" to="-270 500" dur="9s" begin="final_jumper_move.end" repeatCount="1"/>
         <animateTransform attributeName="transform" type="translate" from="-270 500" to="-270 500" dur="7s" begin="fastest_mooving_away_element_animation.end" repeatCount="indefinite"/>
-
 </use>
-<animate id="zoom_in" attributeName="viewBox" from="0 0 750 500" to="50 100 400 300" dur="3s"/>
 
+<!-- camera movements -->
+<animate id="zoom_in" attributeName="viewBox" from="0 0 750 500" to="50 100 400 300" dur="3s"/>
 <animate id="follow_1" attributeName="viewBox" from="50 100 400 300" to="120 200 400 300 " dur="4s" begin="zoom_in.end"/>
 <animate id="zoom_out" attributeName="viewBox" from="120 200 400 300" to="200 150 400 300 " dur="2s" begin="follow_1.end"/>
-<animate id="zoom_in_2" attributeName="viewBox" from="200 150 400 300" to="400 75 200 200 " dur="5s" begin="zoom_out.end"/>
-<animate id="freeze" attributeName="viewBox" from="400 75 200 200" to="400 75 200 200 " dur="indefinite" begin="zoom_in_2.end"/>
+<animate id="zoom_in_2" attributeName="viewBox" from="200 150 400 300" to="300 75 400 300 " dur="5s" begin="zoom_out.end"/>
+<animate id="freeze" attributeName="viewBox" from="300 75 400 300" to="300 75 400 300 " dur="indefinite" begin="zoom_in_2.end"/>
 
 
 
